@@ -1,7 +1,36 @@
 import React from "react";
 
-const Controls = () => {
-  return <div>Controls</div>;
+import "./Controls.css";
+
+type Props = {
+  setTimeInSeconds: Function;
+};
+
+const Controls = (props: Props) => {
+  const { setTimeInSeconds } = props;
+
+  const [intervalId, setIntervalId] = React.useState<number>(0);
+
+  const handlePlayButton = () => {
+    let interval: any = setInterval(() => {
+      setTimeInSeconds((previousState: number) => previousState + 1);
+    }, 1000);
+    setIntervalId(interval);
+  };
+  const handleStopButton = () => {
+    clearInterval(intervalId);
+  };
+  const handleResetButton = () => {
+    clearInterval(intervalId);
+    setTimeInSeconds(0);
+  };
+  return (
+    <div className="controls-container">
+      <button onClick={handlePlayButton}>Play</button>
+      <button onClick={handleStopButton}>Stop</button>
+      <button onClick={handleResetButton}>Reset</button>
+    </div>
+  );
 };
 
 export default Controls;
