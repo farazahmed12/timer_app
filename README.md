@@ -1,6 +1,6 @@
 # PanaCloud Bootcamp Project 7B: React Timer App Typescript
 
-## Project Link: 
+##  
 
 <hr />
 
