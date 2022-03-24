@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders when there are no items 1`] = `
+<div
+  className="controls-container"
+>
+  <button
+    onClick={[Function]}
+  >
+    Play
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Stop
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Reset
+  </button>
+</div>
+`;
